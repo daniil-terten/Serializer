@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serializer", "Serializer\Serializer.csproj", "{D4E8D7F6-A502-4A9D-A7E7-004ADDBE325F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializerTests", "SerializerTests\SerializerTests.csproj", "{B58B7117-F01C-47B0-8096-4E042342BE5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4E8D7F6-A502-4A9D-A7E7-004ADDBE325F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E8D7F6-A502-4A9D-A7E7-004ADDBE325F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E8D7F6-A502-4A9D-A7E7-004ADDBE325F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E8D7F6-A502-4A9D-A7E7-004ADDBE325F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B58B7117-F01C-47B0-8096-4E042342BE5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58B7117-F01C-47B0-8096-4E042342BE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58B7117-F01C-47B0-8096-4E042342BE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58B7117-F01C-47B0-8096-4E042342BE5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {424012EC-266F-4DCE-9861-608311E5566C}
+	EndGlobalSection
+EndGlobal
