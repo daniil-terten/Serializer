@@ -14,32 +14,28 @@ namespace SerializerTests.Implementations
 
         public async Task<ListNode> DeepCopy(ListNode head)
         {
-            using (var stream = new MemoryStream())
-            {
-                await Serialize(head, stream);
-                return await Deserialize(new MemoryStream(stream.ToArray()));
-            }
+            using var stream = new MemoryStream();
+            await Serialize(head, stream);
+            return await Deserialize(new MemoryStream(stream.ToArray()));
         }
 
         public Task<ListNode> Deserialize(Stream s)
         {
             var listNode = new ListNode() { Previous = null };
+            using var reader = new StreamReader(s);
+            string line;
 
-            using (StreamReader reader = new StreamReader(s))
+            while ((line = reader.ReadLine()) is not null)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) is not null)
-                {
-                    listNode.Data = line == "" ? null : line;
-                    var next = new ListNode();
-                    listNode.Next = next;
-                    next.Previous = listNode;
-                    listNode = next;
-                }
-                listNode = listNode.Previous ?? listNode;
-                listNode.Next = null;
+                listNode.Data = line == "" ? null : line;
+                var next = new ListNode();
+                listNode.Next = next;
+                next.Previous = listNode;
+                listNode = next;
             }
+            listNode = listNode.Previous ?? listNode;
+            listNode.Next = null;
+            
 
             while(listNode.Previous is not null) listNode = listNode.Previous;
 
